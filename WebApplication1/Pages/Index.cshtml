@@ -1,0 +1,143 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Upload de Imagem</h1>
+    <p>Selecione uma imagem para fazer upload e visualizar na tela.</p>
+</div>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Upload de Imagem</h3>
+                </div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="UploadedImage" class="form-label">Selecione uma imagem:</label>
+                            <input type="file" 
+                                   class="form-control" 
+                                   id="UploadedImage" 
+                                   name="UploadedImage" 
+                                   accept="image/*"
+                                   onchange="previewImage(this)">
+                            <div class="form-text">Formatos aceitos: JPG, JPEG, PNG, GIF, BMP</div>
+                            <span asp-validation-for="UploadedImage" class="text-danger"></span>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-upload"></i> Fazer Upload
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+    {
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Imagem Carregada</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <button type="button" 
+                                    class="btn btn-success" 
+                                    id="detectFacesBtn"
+                                    onclick="detectFaces()">
+                                <i class="fas fa-search"></i> Detectar Rostos
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-info ms-2" 
+                                    id="cropFaceBtn"
+                                    onclick="cropFaceImage()"
+                                    style="display: none;">
+                                <i class="fas fa-crop"></i> Recortar Rosto 4:3
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-warning ms-2" 
+                                    id="cropRoundBtn"
+                                    onclick="cropRoundFace()"
+                                    style="display: none;">
+                                <i class="fas fa-circle"></i> Recortar Redondo
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-secondary ms-2" 
+                                    id="clearDetectionBtn"
+                                    onclick="clearDetections()"
+                                    style="display: none;">
+                                <i class="fas fa-eraser"></i> Limpar Detecções
+                            </button>
+                        </div>
+                        <div class="image-container detectOnClick" style="position: relative; display: inline-block;">
+                            <img src="@Model.ImageUrl" 
+                                 alt="Imagem carregada" 
+                                 class="img-fluid rounded shadow uploaded-image" 
+                                 style="max-height: 500px;"
+                                 id="uploadedImage">
+                        </div>
+                        <div id="detectionStatus" class="mt-3"></div>
+                        
+                        <!-- Área para mostrar a imagem recortada -->
+                        <div id="croppedImageContainer" class="mt-4" style="display: none;">
+                            <h5><i class="fas fa-cut"></i> Imagem Recortada (4:3)</h5>
+                            <div class="border rounded p-3 bg-light">
+                                <canvas id="croppedCanvas" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"></canvas>
+                                <div class="mt-2">
+                                    <button type="button" 
+                                            class="btn btn-primary btn-sm" 
+                                            id="downloadBtn"
+                                            onclick="downloadCroppedImage()">
+                                        <i class="fas fa-download"></i> Baixar Imagem
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Área para mostrar a imagem redonda recortada -->
+                        <div id="roundCroppedContainer" class="mt-4" style="display: none;">
+                            <h5><i class="fas fa-circle"></i> Imagem Recortada (Redonda)</h5>
+                            <div class="border rounded p-3 bg-light text-center">
+                                <canvas id="roundCroppedCanvas" style="max-width: 300px; border-radius: 50%; box-shadow: 0 4px 20px rgba(0,0,0,0.2);"></canvas>
+                                <div class="mt-2">
+                                    <button type="button" 
+                                            class="btn btn-primary btn-sm" 
+                                            id="downloadRoundBtn"
+                                            onclick="downloadRoundCroppedImage()">
+                                        <i class="fas fa-download"></i> Baixar Imagem Redonda
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <!-- Preview da imagem antes do upload -->
+    <div class="row justify-content-center mt-4" id="imagePreview" style="display: none;">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Preview da Imagem</h3>
+                </div>
+                <div class="card-body text-center">
+                    <img id="preview" src="#" alt="Preview" class="img-fluid rounded" style="max-height: 300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/face-detection.js"></script>
