@@ -27,12 +27,12 @@ public class IndexModel : PageModel
         if (UploadedImage != null && UploadedImage.Length > 0)
         {
             // Verificar se é uma imagem
-            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp", ".webp", ".tiff", ".tif", ".svg", ".ico", ".avif", ".heic", ".heif", ".jfif", ".jpe", ".jfi" };
             var fileExtension = Path.GetExtension(UploadedImage.FileName).ToLowerInvariant();
-            
+
             if (!allowedExtensions.Contains(fileExtension))
             {
-                ModelState.AddModelError("UploadedImage", "Por favor, selecione um arquivo de imagem válido (.jpg, .jpeg, .png, .gif, .bmp)");
+                ModelState.AddModelError("UploadedImage", "Por favor, selecione um arquivo de imagem válido (.jpg, .jpeg, .png, .gif, .bmp, .webp, .tiff, .svg, .ico, .avif, .heic, .heif, .jfif)");
                 return Page();
             }
 

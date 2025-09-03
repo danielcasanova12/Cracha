@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\WebApplication1.psty8vjwab.bundle.scp.css"
     },
     {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\Logotipo_da_Lar_Cooperativa_Agroindustrial.svg.png",
+      "PackagePath": "staticwebassets\\Logotipo_da_Lar_Cooperativa_Agroindustrial.svg.png"
+    },
+    {
       "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -13,8 +17,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\js\\badge-generator.js",
+      "PackagePath": "staticwebassets\\js\\badge-generator.js"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\js\\birefnet-corrected.js",
+      "PackagePath": "staticwebassets\\js\\birefnet-corrected.js"
+    },
+    {
       "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\js\\face-detection.js",
       "PackagePath": "staticwebassets\\js\\face-detection.js"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\js\\modnet-background-remover.js",
+      "PackagePath": "staticwebassets\\js\\modnet-background-remover.js"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\js\\rmbg-background-remover.js",
+      "PackagePath": "staticwebassets\\js\\rmbg-background-remover.js"
     },
     {
       "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\js\\site.js",
@@ -249,60 +269,192 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\05f5853f-28f0-4c6a-b40a-eb544ddc19f2.jpeg",
-      "PackagePath": "staticwebassets\\uploads\\05f5853f-28f0-4c6a-b40a-eb544ddc19f2.jpeg"
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\models\\BiRefNet-portrait-epoch_150.onnx",
+      "PackagePath": "staticwebassets\\models\\BiRefNet-portrait-epoch_150.onnx"
     },
     {
-      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\0a9d1960-49f0-407c-b6f3-5ae881a7656d.jpeg",
-      "PackagePath": "staticwebassets\\uploads\\0a9d1960-49f0-407c-b6f3-5ae881a7656d.jpeg"
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\models\\dow.py",
+      "PackagePath": "staticwebassets\\models\\dow.py"
     },
     {
-      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\0b9cc0fb-0374-4cd1-b8cc-4a3c3ac7f249.jpg",
-      "PackagePath": "staticwebassets\\uploads\\0b9cc0fb-0374-4cd1-b8cc-4a3c3ac7f249.jpg"
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\models\\modnet.onnx",
+      "PackagePath": "staticwebassets\\models\\modnet.onnx"
     },
     {
-      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\0bdd81be-08e4-4fc1-b80a-e3013453bca9.jpeg",
-      "PackagePath": "staticwebassets\\uploads\\0bdd81be-08e4-4fc1-b80a-e3013453bca9.jpeg"
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\models\\rmbg-1.4.onnx",
+      "PackagePath": "staticwebassets\\models\\rmbg-1.4.onnx"
     },
     {
-      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\41ec73a2-25c6-4744-82d3-5b1d76476f08.jpeg",
-      "PackagePath": "staticwebassets\\uploads\\41ec73a2-25c6-4744-82d3-5b1d76476f08.jpeg"
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\rmbg-test.html",
+      "PackagePath": "staticwebassets\\rmbg-test.html"
     },
     {
-      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\4f697a38-5559-4d93-bc3a-dd330cc7c81d.png",
-      "PackagePath": "staticwebassets\\uploads\\4f697a38-5559-4d93-bc3a-dd330cc7c81d.png"
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\test-model.html",
+      "PackagePath": "staticwebassets\\test-model.html"
     },
     {
-      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\54c244cd-9d02-43e7-8050-5187d391af30.jpeg",
-      "PackagePath": "staticwebassets\\uploads\\54c244cd-9d02-43e7-8050-5187d391af30.jpeg"
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\09ac3e57-16a0-47d9-b966-4b350fe1d6f3.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\09ac3e57-16a0-47d9-b966-4b350fe1d6f3.jpeg"
     },
     {
-      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\7dbcd11c-a2c2-4f48-96c8-8e4ce7174520.jpeg",
-      "PackagePath": "staticwebassets\\uploads\\7dbcd11c-a2c2-4f48-96c8-8e4ce7174520.jpeg"
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\0d2c70f4-76c8-47cb-b688-d2c49970910e.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\0d2c70f4-76c8-47cb-b688-d2c49970910e.jpeg"
     },
     {
-      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\7dda8670-282a-48e3-b9f7-eedf84b692d3.jpg",
-      "PackagePath": "staticwebassets\\uploads\\7dda8670-282a-48e3-b9f7-eedf84b692d3.jpg"
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\19d2dd21-69a5-4e67-9470-15222f06a6b0.webp",
+      "PackagePath": "staticwebassets\\uploads\\19d2dd21-69a5-4e67-9470-15222f06a6b0.webp"
     },
     {
-      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\93ba4331-121d-4fea-9e34-f80cf1bbbb56.jpeg",
-      "PackagePath": "staticwebassets\\uploads\\93ba4331-121d-4fea-9e34-f80cf1bbbb56.jpeg"
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\2413c654-7f1f-433b-8f5a-fcaba03f136a.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\2413c654-7f1f-433b-8f5a-fcaba03f136a.jpeg"
     },
     {
-      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\b11c5602-396f-4043-a073-0d2d2113a192.jpeg",
-      "PackagePath": "staticwebassets\\uploads\\b11c5602-396f-4043-a073-0d2d2113a192.jpeg"
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\2555326b-642c-40c0-8fb8-2203259b4074.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\2555326b-642c-40c0-8fb8-2203259b4074.jpeg"
     },
     {
-      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\c3415774-9e25-42c2-82bd-0b3c0cef8940.jpeg",
-      "PackagePath": "staticwebassets\\uploads\\c3415774-9e25-42c2-82bd-0b3c0cef8940.jpeg"
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\28dd1228-cd31-42c8-9c00-640f1d3f3466.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\28dd1228-cd31-42c8-9c00-640f1d3f3466.jpeg"
     },
     {
-      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\d0ffae90-5d64-48b9-bbc4-5cb2f4a22b3a.jpg",
-      "PackagePath": "staticwebassets\\uploads\\d0ffae90-5d64-48b9-bbc4-5cb2f4a22b3a.jpg"
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\301ba321-8f6e-423d-9610-f5a3553c79fd.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\301ba321-8f6e-423d-9610-f5a3553c79fd.jpeg"
     },
     {
-      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\e9c20697-28cf-4926-965e-81125bbf8c87.jpeg",
-      "PackagePath": "staticwebassets\\uploads\\e9c20697-28cf-4926-965e-81125bbf8c87.jpeg"
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\326f2771-05af-413e-84cf-bd8ab6ca0aec.webp",
+      "PackagePath": "staticwebassets\\uploads\\326f2771-05af-413e-84cf-bd8ab6ca0aec.webp"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\39759a63-ffaf-439a-8c8f-ed94cf3397fa.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\39759a63-ffaf-439a-8c8f-ed94cf3397fa.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\3ae6d82f-be3d-4479-9336-5f120846a566.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\3ae6d82f-be3d-4479-9336-5f120846a566.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\3e5344c9-7202-4ea3-8909-f277759ad3be.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\3e5344c9-7202-4ea3-8909-f277759ad3be.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\43223fed-97af-43a6-b3aa-2928d53ddc34.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\43223fed-97af-43a6-b3aa-2928d53ddc34.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\49e60226-0e99-43ab-8afc-5db11aa609bb.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\49e60226-0e99-43ab-8afc-5db11aa609bb.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\4fed3523-d0d5-45f7-ba2e-0d81a20ed64b.webp",
+      "PackagePath": "staticwebassets\\uploads\\4fed3523-d0d5-45f7-ba2e-0d81a20ed64b.webp"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\6496ab2f-1503-41fb-8ae4-1f122f0b7c3d.webp",
+      "PackagePath": "staticwebassets\\uploads\\6496ab2f-1503-41fb-8ae4-1f122f0b7c3d.webp"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\6776c156-35ba-4cb2-80fa-d64325242945.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\6776c156-35ba-4cb2-80fa-d64325242945.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\7385180c-b2ae-42d1-b524-4c2375788889.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\7385180c-b2ae-42d1-b524-4c2375788889.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\8072f725-1827-4cbe-9cd7-c774008fa4bd.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\8072f725-1827-4cbe-9cd7-c774008fa4bd.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\83452dac-29d3-4fc0-956b-5a5dd7b7d1a6.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\83452dac-29d3-4fc0-956b-5a5dd7b7d1a6.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\8816c8b5-98c8-4f33-bc25-958956421f7a.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\8816c8b5-98c8-4f33-bc25-958956421f7a.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\8d24c7ab-0279-4695-a111-34ed292f9e8c.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\8d24c7ab-0279-4695-a111-34ed292f9e8c.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\8d5eca6e-81a7-499f-aef8-1c03f73aa6bf.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\8d5eca6e-81a7-499f-aef8-1c03f73aa6bf.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\9155bf3b-9e6f-4e8c-8d8d-b0f173b09097.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\9155bf3b-9e6f-4e8c-8d8d-b0f173b09097.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\a038b463-58bf-495e-9ad0-d9d55a69dca5.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\a038b463-58bf-495e-9ad0-d9d55a69dca5.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\a5761b16-4384-4044-b0e1-f6e98fcbfccb.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\a5761b16-4384-4044-b0e1-f6e98fcbfccb.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\a6e9ed06-2ac3-4399-9075-125897117b9f.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\a6e9ed06-2ac3-4399-9075-125897117b9f.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\a8f04513-34cb-4529-baa1-3772dba10945.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\a8f04513-34cb-4529-baa1-3772dba10945.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\b8730bb3-bfc4-4f01-acf8-ea645a105bd5.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\b8730bb3-bfc4-4f01-acf8-ea645a105bd5.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\be055ff0-7147-4850-8be1-4701aa75bd06.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\be055ff0-7147-4850-8be1-4701aa75bd06.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\c66e36b9-e561-44c9-8e8c-0afd7b503dc5.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\c66e36b9-e561-44c9-8e8c-0afd7b503dc5.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\ccb60ddc-9487-4e1f-8c80-dca0f86f19ea.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\ccb60ddc-9487-4e1f-8c80-dca0f86f19ea.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\cd70deab-bf1b-424d-a8b7-0b23515609ec.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\cd70deab-bf1b-424d-a8b7-0b23515609ec.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\d1d69589-01fb-4b87-91dc-294497780fa2.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\d1d69589-01fb-4b87-91dc-294497780fa2.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\d3c67033-1e68-4cf8-8fa5-0df6e2182693.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\d3c67033-1e68-4cf8-8fa5-0df6e2182693.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\d4c76ec4-dc2f-489b-8df2-1a9e213c8efa.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\d4c76ec4-dc2f-489b-8df2-1a9e213c8efa.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\d8007822-3957-484b-a6fa-cd7eccafaa29.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\d8007822-3957-484b-a6fa-cd7eccafaa29.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\db1d605c-5468-4a19-b055-561c83510715.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\db1d605c-5468-4a19-b055-561c83510715.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\e3c415ff-9bef-4ea9-b096-a5b939310f07.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\e3c415ff-9bef-4ea9-b096-a5b939310f07.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\f1175a20-3fbb-4c45-a847-3c6fb1f5293d.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\f1175a20-3fbb-4c45-a847-3c6fb1f5293d.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\f722e950-9176-42c7-b9ab-e276cab85a48.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\f722e950-9176-42c7-b9ab-e276cab85a48.jpeg"
+    },
+    {
+      "Id": "C:\\GIT_lar\\face-detect\\WebApplication1\\WebApplication1\\wwwroot\\uploads\\fe4d4e7d-9e2b-417e-aa3b-aa33fd161e5c.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\fe4d4e7d-9e2b-417e-aa3b-aa33fd161e5c.jpeg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

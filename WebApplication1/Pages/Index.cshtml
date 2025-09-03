@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -24,9 +24,9 @@
                                    class="form-control" 
                                    id="UploadedImage" 
                                    name="UploadedImage" 
-                                   accept="image/*"
+                                   accept="image/*,.jpg,.jpeg,.png,.gif,.bmp,.webp,.tiff,.tif,.svg,.ico,.avif,.heic,.heif,.jfif,.jpe,.jfi"
                                    onchange="previewImage(this)">
-                            <div class="form-text">Formatos aceitos: JPG, JPEG, PNG, GIF, BMP</div>
+                            <div class="form-text">Formatos aceitos: JPG, JPEG, PNG, GIF, BMP, WEBP, TIFF, SVG, ICO, AVIF, HEIC, HEIF, JFIF</div>
                             <span asp-validation-for="UploadedImage" class="text-danger"></span>
                         </div>
                         
@@ -70,6 +70,76 @@
                                     onclick="cropRoundFace()"
                                     style="display: none;">
                                 <i class="fas fa-circle"></i> Recortar Redondo
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-danger ms-2" 
+                                    id="removeBackgroundBtn"
+                                    onclick="removeBackground()"
+                                    style="display: none;">
+                                <i class="fas fa-magic"></i> Remover Fundo
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-purple ms-2" 
+                                    id="removeBackgroundRoundBtn"
+                                    onclick="removeBackgroundAndCropRound()"
+                                    style="display: none;">
+                                <i class="fas fa-user-circle"></i> Fundo + Recorte
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-dark ms-2" 
+                                    id="removeBackgroundBiRefNetBtn"
+                                    onclick="removeBackgroundBiRefNet()"
+                                    style="display: none;">
+                                <i class="fas fa-brain"></i> BiRefNet
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-success ms-2" 
+                                    id="removeBackgroundRMBGBtn"
+                                    onclick="removeBackgroundRMBG()"
+                                    style="display: none;">
+                                <i class="fas fa-cut"></i> RMBG
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-info ms-2" 
+                                    id="removeBackgroundMODNetBtn"
+                                    onclick="removeBackgroundMODNet()"
+                                    style="display: none;">
+                                <i class="fas fa-user"></i> MODNet
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-warning ms-2" 
+                                    id="removeBackgroundMODNetRoundBtn"
+                                    onclick="removeBackgroundMODNetRound()"
+                                    style="display: none;">
+                                <i class="fas fa-user-circle"></i> MODNet + Redondo
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-success ms-2" 
+                                    id="generateBadgeBtn"
+                                    onclick="generateBadgeFromResult()"
+                                    style="display: none;">
+                                <i class="fas fa-id-card"></i> Gerar Crachá
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-warning ms-2" 
+                                    id="generateBadgeRoundSimpleBtn"
+                                    onclick="generateBadgeFromRoundSimple()"
+                                    style="display: none;">
+                                <i class="fas fa-id-card-alt"></i> Gerar Crachá Redondo
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-primary ms-2" 
+                                    id="generateBadgeRoundBtn"
+                                    onclick="generateBadgeFromRoundCrop()"
+                                    style="display: none;">
+                                <i class="fas fa-user-circle"></i> Crachá Sem Fundo
+                            </button>
+                            <button type="button" 
+                                    class="btn btn-info ms-2" 
+                                    id="generateBadgeRoundWithBgBtn"
+                                    onclick="generateBadgeFromRoundCropWithBackground()"
+                                    style="display: none;">
+                                <i class="fas fa-portrait"></i> Crachá Com Fundo
                             </button>
                             <button type="button" 
                                     class="btn btn-secondary ms-2" 
@@ -119,6 +189,106 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Área para mostrar a imagem sem fundo -->
+                        <div id="noBackgroundContainer" class="mt-4" style="display: none;">
+                            <h5><i class="fas fa-magic"></i> Imagem Sem Fundo</h5>
+                            <div class="border rounded p-3 bg-light text-center" style="background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f0f0f0 75%), linear-gradient(-45deg, transparent 75%, #f0f0f0 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;">
+                                <canvas id="noBackgroundCanvas" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);"></canvas>
+                                <div class="mt-2">
+                                    <button type="button" 
+                                            class="btn btn-primary btn-sm" 
+                                            id="downloadNoBackgroundBtn"
+                                            onclick="downloadNoBackgroundImage()">
+                                        <i class="fas fa-download"></i> Baixar Sem Fundo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Área para mostrar a imagem combinada (sem fundo + recorte redondo) -->
+                        <div id="combinedContainer" class="mt-4" style="display: none;">
+                            <h5><i class="fas fa-user-circle"></i> Imagem Sem Fundo + Recorte Redondo</h5>
+                            <div class="border rounded p-3 bg-light text-center" style="background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f0f0f0 75%), linear-gradient(-45deg, transparent 75%, #f0f0f0 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;">
+                                <canvas id="combinedCanvas" style="max-width: 300px; border-radius: 50%; box-shadow: 0 6px 25px rgba(0,0,0,0.3);"></canvas>
+                                <div class="mt-2">
+                                    <button type="button" 
+                                            class="btn btn-primary btn-sm" 
+                                            id="downloadCombinedBtn"
+                                            onclick="downloadCombinedImage()">
+                                        <i class="fas fa-download"></i> Baixar Combinado
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Área para mostrar a imagem com BiRefNet -->
+                        <div id="biRefNetContainer" class="mt-4" style="display: none;">
+                            <h5><i class="fas fa-brain"></i> Imagem BiRefNet (Alta Precisão)</h5>
+                            <div id="biRefNetStatus" class="mb-3"></div>
+                            <div class="border rounded p-3 bg-light text-center" style="background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f0f0f0 75%), linear-gradient(-45deg, transparent 75%, #f0f0f0 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;">
+                                <canvas id="biRefNetCanvas" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);"></canvas>
+                                <div class="mt-2">
+                                    <button type="button" 
+                                            class="btn btn-primary btn-sm" 
+                                            id="downloadBiRefNetBtn"
+                                            onclick="downloadBiRefNetImage()">
+                                        <i class="fas fa-download"></i> Baixar BiRefNet
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Área para mostrar a imagem com RMBG -->
+                        <div id="rmbgContainer" class="mt-4" style="display: none;">
+                            <h5><i class="fas fa-cut"></i> Imagem RMBG (Remoção Profissional)</h5>
+                            <div id="rmbgStatus" class="mb-3"></div>
+                            <div class="border rounded p-3 bg-light text-center" style="background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f0f0f0 75%), linear-gradient(-45deg, transparent 75%, #f0f0f0 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;">
+                                <canvas id="rmbgCanvas" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);"></canvas>
+                                <div class="mt-2">
+                                    <button type="button" 
+                                            class="btn btn-primary btn-sm" 
+                                            id="downloadRMBGBtn"
+                                            onclick="downloadRMBGImage()">
+                                        <i class="fas fa-download"></i> Baixar RMBG
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Área para mostrar a imagem com MODNet -->
+                        <div id="modnetContainer" class="mt-4" style="display: none;">
+                            <h5><i class="fas fa-user"></i> Imagem MODNet (Retratos)</h5>
+                            <div id="modnetStatus" class="mb-3"></div>
+                            <div class="border rounded p-3 bg-light text-center" style="background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f0f0f0 75%), linear-gradient(-45deg, transparent 75%, #f0f0f0 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;">
+                                <canvas id="modnetCanvas" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);"></canvas>
+                                <div class="mt-2">
+                                    <button type="button" 
+                                            class="btn btn-info btn-sm" 
+                                            id="downloadMODNetBtn"
+                                            onclick="downloadMODNetImage()">
+                                        <i class="fas fa-download"></i> Baixar MODNet
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Área para mostrar a imagem com MODNet Round -->
+                        <div id="modnetRoundContainer" class="mt-4" style="display: none;">
+                            <h5><i class="fas fa-user-circle"></i> Foto de Perfil MODNet (Redonda)</h5>
+                            <div id="modnetRoundStatus" class="mb-3"></div>
+                            <div class="border rounded p-3 bg-light text-center" style="background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f0f0f0 75%), linear-gradient(-45deg, transparent 75%, #f0f0f0 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px;">
+                                <canvas id="modnetRoundCanvas" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2);"></canvas>
+                                <div class="mt-2">
+                                    <button type="button" 
+                                            class="btn btn-warning btn-sm" 
+                                            id="downloadMODNetRoundBtn"
+                                            onclick="downloadMODNetRoundImage()">
+                                        <i class="fas fa-download"></i> Baixar Perfil
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -141,3 +311,6 @@
 </div>
 
 <script src="~/js/face-detection.js"></script>
+<script src="~/js/rmbg-background-remover.js"></script>
+<script src="~/js/modnet-background-remover.js"></script>
+<script src="~/js/badge-generator.js"></script>
